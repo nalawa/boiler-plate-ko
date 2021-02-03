@@ -6,23 +6,23 @@ const userSchema = mongoose.Schema({
         maxlength: 50
     },
     email: {
-        thpe: String,
-        trim: true,
+        type: String,
+       // trim: true,  // 스페이스를 없애주는 역할
         unique: 1
     },
     password: {
         type: String,
         maxlength: 50
     },
-    role: {
+    role: {         // 관리자 역할과 같은 ..
         type: Number,
         default: 0
     },
     image: String,
-    token: {
-        thpe: String
+    token: {        // 토큰으로 유효성을 관리한다
+        type: String
     },
-    tokenExp: {
+    tokenExp: {     // 토큰으로 만료 ..
         type: Number
     }
 })
